@@ -2,7 +2,7 @@
 
 Real-time gender classification and age estimation from webcam or photo input, using two custom CNNs trained on 23,687 face images and OpenCV's DNN face detector for live inference.
 
-![Live Demo](images/live_demo.png)
+![Live Demo](live_demo.png)
 
 ## Problem
 
@@ -12,7 +12,7 @@ Estimating gender and age from a face is a two-part problem disguised as one: ge
 
 **Dataset**: [UTKFace](https://susanqq.github.io/UTKFace/) — 23,687 valid face images after filtering, ages 1–100 (Male: 12,386 | Female: 11,301).
 
-![Dataset Distribution](images/dataset_distribution.png)
+![Dataset Distribution](dataset_distribution.png)
 
 **Pipeline**:
 1. **Preprocessing** — faces resized to 64×64, normalized to [0,1], labels parsed from filenames
@@ -25,8 +25,8 @@ Estimating gender and age from a face is a two-part problem disguised as one: ge
 
 ### Gender classification — 94% test accuracy
 
-![Gender Training Curves](images/gender_training_curves.png)
-![Gender Confusion Matrix](images/gender_confusion_matrix.png)
+![Gender Training Curves](gender_training_curves.png)
+![Gender Confusion Matrix](gender_confusion_matrix.png)
 
 | | Precision | Recall | F1-score | Support |
 |---|---|---|---|---|
@@ -38,7 +38,7 @@ Best validation accuracy during training: 91.28%. Final held-out test accuracy: 
 
 ### Age estimation — 8.61 years MAE overall, but uneven across age groups
 
-![Age Prediction Scatter](images/age_prediction_scatter.png)
+![Age Prediction Scatter](age_prediction_scatter.png)
 
 | Age Group | MAE | Samples |
 |---|---|---|
@@ -69,7 +69,7 @@ Python · OpenCV (DNN face detection) · TensorFlow / Keras · NumPy · scikit-l
 │   ├── opencv_face_detector_uint8.pb
 │   ├── y_age.npy
 │   └── y_gender.npy
-├── images/                                    # Charts used in this README
+├──                                     # Charts used in this README
 ├── requirements.txt
 ├── .gitignore
 └── README.md
